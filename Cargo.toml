@@ -1,0 +1,17 @@
+[package]
+name = "car_path"
+version = "0.1.0"
+edition = "2021"
+authors = ["RLMarvin"]
+
+[lib]
+name = "car_path"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.18.0", features = ["abi3-py37", "extension-module"] }
+glam = { version = "*"}
+
+[profile.release]
+lto = true
+strip = true
